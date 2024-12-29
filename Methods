@@ -1,0 +1,148 @@
+import numpy as np
+
+# array
+a = np.array([1, 2, 3])  # [1 2 3]
+
+# zeros
+z = np.zeros((2, 3))  # [[0. 0. 0.]
+                      #  [0. 0. 0.]]
+
+# ones
+o = np.ones((2, 3))  # [[1. 1. 1.]
+                      #  [1. 1. 1.]]
+
+# empty
+e = np.empty((2, 2))  # Random uninitialized values
+
+# arange
+r = np.arange(0, 10, 2)  # [0 2 4 6 8]
+
+#linspace
+l = np.linspace(0, 1, 5)  # [0.   0.25 0.5  0.75 1. ]
+print(l)
+
+#eye
+eye = np.eye(3)  # Identity matrix
+print(eye)
+
+#random.rand
+rand = np.random.rand(3, 2)  # Random numbers [0, 1]
+print(rand)
+
+#random.randn
+randn = np.random.randn(3, 2)  # Random numbers (normal distribution)
+print(randn)
+
+#random.randint
+randint = np.random.randint(1, 10, (2, 3))  # Random integers
+print(randint)
+
+b = np.array([[1, 2], [3.02,4], [5, 6]])
+print(b)
+
+# shape
+print(b.shape)  # (3, 2)
+
+# size
+print(b.size)  # 6
+
+# ndim
+print(b.ndim)  # 2
+
+# dtype
+print(b.dtype)  # int64
+
+c = np.arange(1, 7)  # [1 2 3 4 5 6]
+
+# reshape
+reshaped = c.reshape(2, 3)  # [[1 2 3]
+                            #  [4 5 6]]
+
+# ravel
+print(reshaped.ravel())  # [1 2 3 4 5 6]
+
+# flatten
+print(reshaped.flatten())  # [1 2 3 4 5 6]
+
+# transpose
+print(reshaped.transpose())  # [[1 4]
+                              #  [2 5]
+                              #  [3 6]]
+
+# expand_dims
+expanded = np.expand_dims(c, axis=0)  # [[1 2 3 4 5 6]]
+
+# squeeze
+print(expanded.squeeze())  # [1 2 3 4 5 6]
+
+x = np.array([1, 2, 3])
+y = np.array([4, 5, 6])
+
+# add
+print(np.add(x, y))  # [5 7 9]
+
+# dot
+print(np.dot(x, y))  # 32 (1*4 + 2*5 + 3*6)
+
+# sqrt
+print(np.sqrt(x))  # [1. 1.414 1.732]
+
+# sum
+print(x.sum())  # 6
+
+arr = np.array([[10, 20, 30], [40, 50, 60]])
+
+# where
+print(np.where(arr > 30))  # (array([1, 1]), array([0, 1]))
+
+# take
+print(np.take(arr, [0, 2]))  # [10 30]
+
+s = np.array([3, 1, 2])
+
+# sort
+print(np.sort(s))  # [1 2 3]
+
+# argsort
+print(np.argsort(s))  # [1 2 0]
+
+stats = np.array([1, 2, 3, 4])
+
+# percentile
+print(np.percentile(stats, 50))  # 2.5 (median)
+
+# mean
+print(stats.mean())  # 2.5
+
+# std
+print(stats.std())  # 1.118
+
+# median
+print(np.median(stats))  # 2.5
+
+mat = np.array([[1, 2], [3, 4]])
+
+# inv
+print(np.linalg.inv(mat))  # [[-2.   1. ]
+                           #  [ 1.5 -0.5]]
+
+# det
+print(np.linalg.det(mat))  # -2.0
+
+v1 = np.array([1, 2, 3])
+v2 = np.array([4, 5])
+
+# meshgrid
+X, Y = np.meshgrid(v1, v2)
+print(X)  # [[1 2 3]
+          #  [1 2 3]]
+
+util = np.array([1, 2, 2, 3])
+
+# unique
+print(np.unique(util))  # [1 2 3]
+
+# concatenate
+a = np.array([1, 2])
+b = np.array([3, 4])
+print(np.concatenate((a, b)))  # [1 2 3 4]
